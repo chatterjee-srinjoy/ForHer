@@ -1,9 +1,11 @@
-# R
-.Rhistory
-.RData
-.Rproj.user
-*.Rproj
-.Ruserdata
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+env/
 
 # Environment
 .env
@@ -18,6 +20,3 @@
 # OS
 .DS_Store
 Thumbs.db
-
-# Shiny deployment
-rsconnect/

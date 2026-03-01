@@ -2,20 +2,17 @@
 
 **Healthcare in the U.S. explained without the confusion.**
 
-An AI-powered Shiny app for first-generation and international female students to understand preventive healthcare in the United States.
+An AI-powered **Python Shiny** app for first-generation and international female students to understand preventive healthcare in the United States.
 
-## Features
+## Concept
 
-- **API Integration**: MyHealthfinder API (U.S. HHS) – official preventive health guidance
-- **Personalized Recommendations**: Enter age, sex, and health factors for tailored guidance
-- **AI-Powered Insights**: Summaries generated via OpenAI or Ollama
-- **Visualizations**: Category distribution, recommendations checklist
-- **Reactive UI**: Updates based on your profile
+- Compares users' expectations (from their home country background) with official U.S. preventive care recommendations.
+- Uses the MyHealthfinder API to fetch evidence-based guidance.
+- Uses AI to simplify language and highlight 2–3 key takeaways.
 
-## API
+## Tech Stack
 
-[MyHealthfinder API](https://odphp.health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers/api-content) – No API key required.
-
-## Deployment
-
-Deploy to Posit Cloud Connect, Posit Connect, or DigitalOcean.
+- Python 3.10+
+- Shiny for Python
+- pandas, matplotlib
+- OpenAI (optional, for AI summaries)

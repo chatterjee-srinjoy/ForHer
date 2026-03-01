@@ -22,10 +22,11 @@ Returns preventive care recommendations based on user demographics.
 | pregnant       | string | "yes" or "no"                 |
 | sexuallyActive | string | "yes" or "no"                 |
 | tobaccoUse     | string | "yes" or "no"                 |
-| lang           | string | "en" or "es" (optional)       |
+| Lang           | string | "en" or "es" (optional)       |
 
 **Example Query**:
-```
+
+```text
 https://odphp.health.gov/myhealthfinder/api/v4/myhealthfinder.json?age=25&sex=female&pregnant=no&sexuallyActive=yes&tobaccoUse=no
 ```
 
@@ -33,17 +34,21 @@ https://odphp.health.gov/myhealthfinder/api/v4/myhealthfinder.json?age=25&sex=fe
 
 Returns all available health topics.
 
-**URL**: `https://odphp.health.gov/myhealthfinder/api/v4/itemlist.json?type=topic&lang=en`
+```text
+https://odphp.health.gov/myhealthfinder/api/v4/itemlist.json?Type=topic&Lang=en
+```
 
 ### 3. Category List (`itemlist.json`)
 
 Returns all health categories.
 
-**URL**: `https://odphp.health.gov/myhealthfinder/api/v4/itemlist.json?type=category&lang=en`
+```text
+https://odphp.health.gov/myhealthfinder/api/v4/itemlist.json?Type=category&Lang=en
+```
 
-## R Implementation
+## Python Implementation
 
-See `R/api_client.R` for the API client functions:
+See `src/api_client.py` for the API client functions:
 - `fetch_myhealthfinder()` – personalized recommendations
 - `fetch_itemlist()` – topics or categories
 - `fetch_topic()` – details for a specific topic

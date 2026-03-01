@@ -2,37 +2,40 @@
 
 **Healthcare in the U.S. explained without the confusion.**
 
-An AI-powered Shiny app for first-generation and international female students to understand preventive healthcare in the United States.
+An AI-powered **Python Shiny** app for first-generation and international female students to understand preventive healthcare in the United States.
 
 ## Project Overview
 
 | | |
 |---|---|
 | **Topic** | Women's Health for First-Gen / International Students |
-| **API** | [MyHealthfinder API](https://odphp.health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers/api-content) (U.S. HHS) |
-| **Stack** | R, Shiny, shinydashboard |
+| **API** | MyHealthfinder API (U.S. HHS) |
+| **Stack** | Python, Shiny for Python, pandas, matplotlib, OpenAI |
 
 ## Quick Start
 
-```r
-# 1. Install dependencies
-source("install_packages.R")
+```bash
+# 1. Create venv and install
+python -m venv venv
+source venv/bin/activate   # Windows: venv\\Scripts\\activate
+pip install -r requirements.txt
 
-# 2. Run app locally
-shiny::runApp()
+# 2. Run app
+shiny run --reload app.py
 ```
 
-## Assignment Components
+## Features (Matches Assignment)
 
 - **API Integration**: MyHealthfinder – personalized preventive care recommendations
 - **Key Statistics**: Value boxes (recommendations, topics, categories)
-- **AI Insights**: OpenAI or Ollama for plain-language summaries
-- **UI**: shinydashboard, reactive text, value boxes
-- **Visualizations**: Category bar chart, type pie chart, recommendations table
-- **Deployment**: See `docs/DEPLOYMENT.md`
+- **AI Insights**: OpenAI for plain-language summaries (optional; app still works without)
+- **UI**: Python Shiny sidebar layout, clean cards, reactive text
+- **Visualizations**: Category bar chart, type pie chart, recommendations table, topics table
+- **Deployment**: Can be deployed to Posit Connect or other Python/Shiny-capable platforms
 
-## Lab Documentation
+## Files
 
-- `docs/LAB_your_good_api_query.md` – API queries
-- `docs/LAB_cursor_shiny_app.md` – Shiny app structure
-- `docs/LAB_ai_reporter.md` – AI integration
+- `app.py` – Main Python Shiny app (UI + server)
+- `src/api_client.py` – MyHealthfinder API client
+- `src/ai_insights.py` – AI summarization via OpenAI
+- `requirements.txt` – Python dependencies

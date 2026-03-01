@@ -1,19 +1,19 @@
-# LAB: Shiny Application - ForHer
+# LAB: Python Shiny Application - ForHer
 
 ## App Structure
 
-```
+```text
 ForHer/
-├── app.R                 # Main Shiny application
-├── R/
-│   ├── api_client.R      # MyHealthfinder API integration
-│   └── ai_insights.R     # AI-powered reporting (OpenAI/Ollama)
+├── app.py                 # Main Shiny for Python app
+├── src/
+│   ├── __init__.py
+│   ├── api_client.py      # MyHealthfinder API integration
+│   └── ai_insights.py     # AI-powered reporting (OpenAI)
 ├── docs/
 │   ├── ABOUT.md
 │   ├── LAB_your_good_api_query.md
-│   ├── LAB_cursor_shiny_app.md
-│   └── LAB_ai_reporter.md
-├── install_packages.R    # Dependency installation
+│   └── LAB_cursor_shiny_app.md
+├── requirements.txt
 └── README.md
 ```
 
@@ -21,27 +21,26 @@ ForHer/
 
 | Requirement        | Implementation                                      |
 |--------------------|-----------------------------------------------------|
-| API Integration    | MyHealthfinder API via `R/api_client.R`            |
-| Key Statistics     | Value boxes: recommendations count, topics, categories |
-| AI-Powered Insights| `R/ai_insights.R` – OpenAI or Ollama summaries      |
-| Clean UI           | shinydashboard with purple theme                    |
-| Reactive Text      | `reactive_summary` updates with user inputs         |
-| Value Boxes        | 3 value boxes for key metrics                      |
-| Visualizations     | Category bar chart, recommendations table, topics table |
-| Deployment         | rsconnect for Posit Connect / Cloud                |
+| API Integration    | MyHealthfinder API via `src/api_client.py`          |
+| Key Statistics     | `ui.value_box` components: recommendations, topics, categories |
+| AI-Powered Insights| `src/ai_insights.py` – OpenAI summaries             |
+| Clean UI           | `ui.page_sidebar` layout, cards, readable text      |
+| Reactive Text      | `reactive_summary` output updates with user inputs  |
+| Value Boxes        | 3 value boxes for key metrics                       |
+| Visualizations     | Bar chart, pie chart, recommendations table, topics table |
+| Deployment         | Posit Connect or other Python Shiny hosting         |
 
 ## Running Locally
 
-```r
-# 1. Install packages
-source("install_packages.R")
-
-# 2. Run app
-shiny::runApp()
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+shiny run --reload app.py
 ```
 
 ## Cursor Usage
 
-- Use Cursor to edit `app.R`, `R/api_client.R`, and `R/ai_insights.R`
-- Ask Cursor to add new visualizations or fix API parsing
-- Use Cursor for deployment configuration (rsconnect)
+- Use Cursor to edit `app.py`, `src/api_client.py`, and `src/ai_insights.py`.
+- Ask Cursor to add new visualizations or adjust the layout.
+- Use Cursor to help with deployment configuration.
