@@ -8,7 +8,7 @@ ForHer/
 ├── src/
 │   ├── __init__.py
 │   ├── api_client.py      # MyHealthfinder API integration
-│   └── ai_insights.py     # AI-powered reporting (OpenAI)
+│   └── ai_insights.py     # AI-powered reporting (Ollama)
 ├── docs/
 │   ├── ABOUT.md
 │   ├── LAB_your_good_api_query.md
@@ -23,7 +23,7 @@ ForHer/
 |--------------------|-----------------------------------------------------|
 | API Integration    | MyHealthfinder API via `src/api_client.py`          |
 | Key Statistics     | `ui.value_box` components: recommendations, topics, categories |
-| AI-Powered Insights| `src/ai_insights.py` – OpenAI summaries             |
+| AI-Powered Insights| `src/ai_insights.py` – Ollama (local LLM) summaries |
 | Clean UI           | `ui.page_sidebar` layout, cards, readable text      |
 | Reactive Text      | `reactive_summary` output updates with user inputs  |
 | Value Boxes        | 3 value boxes for key metrics                       |
